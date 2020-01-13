@@ -8,6 +8,7 @@ from core.models import Evento
 
 def lista_eventos(request):
     #evento = Evento.objects.get(id=1)
+    #evento = Evento.objects.all()
     usuario = request.user
     evento = Evento.objects.filter(usuario=usuario)
     response = {'eventos': evento}
